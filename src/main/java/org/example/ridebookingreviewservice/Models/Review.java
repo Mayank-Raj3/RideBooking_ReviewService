@@ -1,9 +1,7 @@
 package org.example.ridebookingreviewservice.Models;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
@@ -14,6 +12,8 @@ import lombok.*;
 @Entity
 @ToString
 @Table(name = "bookingreview")
+@Inheritance(strategy = InheritanceType.JOINED)
+
 public class Review extends BaseModel {
 
     @Column(nullable = false)

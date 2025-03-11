@@ -17,7 +17,7 @@ import java.sql.Timestamp;
 @MappedSuperclass
 public abstract class BaseModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     protected Long id;
 
     @Temporal(TemporalType.TIMESTAMP)
